@@ -9,19 +9,16 @@ import { connect } from 'react-redux';
 const RestaurantsList = (props) => {
 
   const {
-    userInfo,
     menus,
     loading
 
   } = props;
 
-  const [load, setLoad] = useState(true);
   const [reload, setReload] = useState(false);
   const [count, setCount] = useState(0);
 
-
   const Items = React.memo(() => <>
-    {menus.item.map(menuItem =>
+    {menus.map(menuItem =>
       <RestaurantCard restaurant={menuItem} key={menuItem.id} />
     )}
   </>, [menus]);
@@ -35,10 +32,10 @@ const RestaurantsList = (props) => {
       </div>
       <button onClick={() => setReload(true)}>Reload</button>
       <div className="restaurants">
-        {load &&
+        {loading &&
           <div className="loading">Cargando</div>
         }
-        {!load && <Items />}
+        {!loading && <Items />}
       </div>
     </>
   );
