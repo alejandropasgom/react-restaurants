@@ -1,0 +1,61 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color:whitesmoke;
+}
+
+#header{
+    height: 80px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid grey;
+}
+
+#header .logo{
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 8px;
+    /*background-image: url("./logo.png");*/
+    background-size: contain;
+    background-repeat: none;
+    background-position: center;
+}
+
+#header .title{
+    font-size: x-large;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+button{
+    background-color: green;
+}
+
+button:hover{
+    background-color: pink;
+}
+
+
+.restaurants {
+    padding: 8px;
+}
+.restaurant-card{
+    padding: 8px;
+    border:1px solid #D7D7D7;
+    margin-bottom: 8px;
+    transition: 0.5s ease all;
+}
+/*.restaurant-card.loading{
+    margin-top: 1000px;
+}*/
+
+.restaurant-card ul{
+    background-color: greenyellow;
+}
+.restaurant-card li:first-child{
+    background-color: blueviolet;
+}

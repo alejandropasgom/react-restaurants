@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Restaurante 1",
+        "phone": "+34 000 000 000",
+        "menu": [
+            {
+                "key": "primeros",
+                "item": "Plato 1"
+            }
+        ],
+        "onlineEnable": "true"
+    }
+]
