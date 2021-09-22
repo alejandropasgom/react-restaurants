@@ -3,7 +3,6 @@ import Header from '../../components/header/Header';
 import { getMenus } from "./actions";
 import { RestaurantCard } from './components/restaurantCard/RestaurantCard';
 import './restaurantsList.css';
-
 import { connect } from 'react-redux';
 
 const RestaurantsList = (props) => {
