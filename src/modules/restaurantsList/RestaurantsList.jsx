@@ -10,30 +10,18 @@ const RestaurantsList = (props) => {
 
   const {
     userInfo,
-    loadMenus,
+    menus,
     loading
-    
+
   } = props;
 
   const [load, setLoad] = useState(true);
   const [reload, setReload] = useState(false);
   const [count, setCount] = useState(0);
-  const [menus, getMenus] = useState([]);
-
-  useEffect(() => {
-    getMenus(0,20);
-  }, []);
-
-/*  useEffect(() => {
-    if (reload) {
-      setMenus([]);
-      getMenus(0,20).then();
-    }
-  }, [reload]);*/
 
 
   const Items = React.memo(() => <>
-    {menus.map(menuItem =>
+    {menus.item.map(menuItem =>
       <RestaurantCard restaurant={menuItem} key={menuItem.id} />
     )}
   </>, [menus]);
@@ -41,7 +29,6 @@ const RestaurantsList = (props) => {
   return (
     <>
       <Header />
-      <div>{`Hola ${userInfo ? userInfo.name : ''}`}</div>
       <div>
         {count}
         <button onClick={() => setCount(count + 1)}>Add count</button>
